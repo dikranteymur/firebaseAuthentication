@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D16EE5B279E8CEC0085A00C /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D16EE5A279E8CEC0085A00C /* SignUpBuilder.swift */; };
+		1D16EE5D279E8D320085A00C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D16EE5C279E8D320085A00C /* SignUpViewModel.swift */; };
+		1D16EE5F279E8D400085A00C /* SignUpContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D16EE5E279E8D400085A00C /* SignUpContracts.swift */; };
 		1D6D8777279C041C0058E9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D8776279C041C0058E9FF /* AppDelegate.swift */; };
 		1D6D8780279C041D0058E9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D6D877F279C041D0058E9FF /* Assets.xcassets */; };
 		1D6D8783279C041D0058E9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6D8781279C041D0058E9FF /* LaunchScreen.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D16EE5A279E8CEC0085A00C /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
+		1D16EE5C279E8D320085A00C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		1D16EE5E279E8D400085A00C /* SignUpContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContracts.swift; sourceTree = "<group>"; };
 		1D6D8773279C041C0058E9FF /* FirebaseAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6D8776279C041C0058E9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D6D877F279C041D0058E9FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,6 +211,9 @@
 			children = (
 				1D6D87E7279DB5040058E9FF /* SignUpView.xib */,
 				1D6D87E9279DB5100058E9FF /* SignUpViewController.swift */,
+				1D16EE5C279E8D320085A00C /* SignUpViewModel.swift */,
+				1D16EE5A279E8CEC0085A00C /* SignUpBuilder.swift */,
+				1D16EE5E279E8D400085A00C /* SignUpContracts.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -357,7 +366,10 @@
 				1D6D87E3279DA98C0058E9FF /* TabbarBuilder.swift in Sources */,
 				1D6D879F279C05360058E9FF /* LoginContracts.swift in Sources */,
 				1D6D87B4279C065A0058E9FF /* ProfileViewModel.swift in Sources */,
+				1D16EE5B279E8CEC0085A00C /* SignUpBuilder.swift in Sources */,
 				1D6D879B279C051F0058E9FF /* LoginViewModel.swift in Sources */,
+				1D16EE5F279E8D400085A00C /* SignUpContracts.swift in Sources */,
+				1D16EE5D279E8D320085A00C /* SignUpViewModel.swift in Sources */,
 				1D6D87A2279C058A0058E9FF /* TabbarContoller.swift in Sources */,
 				1D6D87B0279C06460058E9FF /* MainBuilder.swift in Sources */,
 				1D6D87E1279DA59C0058E9FF /* UserdefaultExtension.swift in Sources */,

@@ -15,27 +15,46 @@ class SignUpViewController: UIViewController {
     
     private let auth = Auth.auth()
     
+    var viewModel: SignUpViewModelProtocol! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        viewModel.setTitle()
         
     }
     
     @IBAction func createButtonTapped(_ sender: Any) {
         if let email = emailTextField.text,
            let password = passwordTextField.text {
-            auth.createUser(withEmail: email, password: password) { result, error in
-                if let error = error {
-                    self.alert(status: .error)
-                    print("error: \(error)")
-                } else {
-                    self.alert(status: .success)
-                }
-            }
+            viewModel.createUser(email: email, password: password)
         }
     }
     
 
+}
+
+extension SignUpViewController: SignUpViewModelDelegate {
+    func handleOutput(_ output: SignUpViewModelOutput) {
+        switch output {
+            case .updateTitle(let string):
+                title = string
+            case .setLoading(let bool):
+                print("Is Loading: \(bool)")
+        }
+    }
+    
+    func navigate(to route: SignUpRoute) {
+        switch route {
+            case .showAlert(let alertStatus):
+                alert(status: alertStatus)
+        }
+    }
+    
+    
 }
 
 extension SignUpViewController {

@@ -51,8 +51,9 @@ class LoginViewController: UIViewController {
     
     @objc func tapSighUpLabel() {
         print("Uye ol")
-        let viewController = SignUpViewController(nibName: "SignUpView", bundle: nil)
-        present(viewController, animated: true, completion: nil)
+//        let viewController = SignUpViewController(nibName: "SignUpView", bundle: nil)
+        let vc = SignUpBuilder.make()
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func signInButton(_ sender: Any) {
@@ -69,7 +70,7 @@ class LoginViewController: UIViewController {
                 print("error: \(error)")
             } else {
                 self.alert(status: .success)
-                print("result: \(result)")
+                print("result: \(String(describing: result))")
             }
         }
     }
@@ -87,7 +88,4 @@ extension LoginViewController {
     }
 }
 
-enum AlertStatus {
-    case success
-    case error
-}
+
