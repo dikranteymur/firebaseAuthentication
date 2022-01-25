@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nT-sG-dkb">
-                                <rect key="frame" x="163.5" y="86" width="87.5" height="42"/>
+                                <rect key="frame" x="163.5" y="130" width="87.5" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="s4R-PW-yXx">
-                                <rect key="frame" x="32" y="328" width="350" height="306.5"/>
+                                <rect key="frame" x="32" y="372" width="350" height="306.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rgg-au-CZE">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="66.5"/>
@@ -88,6 +88,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="s4R-PW-yXx" secondAttribute="trailing" constant="32" id="sL1-wi-2V6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="NFC-tA-XWK"/>
                     <connections>
                         <outlet property="emailTextField" destination="NS5-Mb-0Qz" id="9RT-5E-Y09"/>
                         <outlet property="passwordTextField" destination="HzZ-NF-WpH" id="XIG-hX-Yg8"/>
@@ -96,7 +97,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="94"/>
+            <point key="canvasLocation" x="1023.1884057971015" y="93.75"/>
+        </scene>
+        <!--Login Navigation Controller-->
+        <scene sceneID="K0p-dp-DJU">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="UJH-MK-KGh" customClass="LoginNavigationController" customModule="FirebaseAuthentication" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iwp-Nf-Vef">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="wsy-jt-js9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tls-ih-tM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="93.75"/>
         </scene>
     </scenes>
     <resources>

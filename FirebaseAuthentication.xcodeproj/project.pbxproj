@@ -10,6 +10,7 @@
 		1D16EE5B279E8CEC0085A00C /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D16EE5A279E8CEC0085A00C /* SignUpBuilder.swift */; };
 		1D16EE5D279E8D320085A00C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D16EE5C279E8D320085A00C /* SignUpViewModel.swift */; };
 		1D16EE5F279E8D400085A00C /* SignUpContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D16EE5E279E8D400085A00C /* SignUpContracts.swift */; };
+		1D16EE65279EEA560085A00C /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D16EE64279EEA560085A00C /* LoginNavigationController.swift */; };
 		1D6D8777279C041C0058E9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D8776279C041C0058E9FF /* AppDelegate.swift */; };
 		1D6D8780279C041D0058E9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D6D877F279C041D0058E9FF /* Assets.xcassets */; };
 		1D6D8783279C041D0058E9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6D8781279C041D0058E9FF /* LaunchScreen.storyboard */; };
@@ -44,6 +45,7 @@
 		1D16EE5A279E8CEC0085A00C /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		1D16EE5C279E8D320085A00C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		1D16EE5E279E8D400085A00C /* SignUpContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContracts.swift; sourceTree = "<group>"; };
+		1D16EE64279EEA560085A00C /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		1D6D8773279C041C0058E9FF /* FirebaseAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6D8776279C041C0058E9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D6D877F279C041D0058E9FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				1D6D8796279C050A0058E9FF /* Login.storyboard */,
 				1D6D8798279C05150058E9FF /* LoginViewController.swift */,
+				1D16EE64279EEA560085A00C /* LoginNavigationController.swift */,
 				1D6D879A279C051F0058E9FF /* LoginViewModel.swift */,
 				1D6D879C279C052B0058E9FF /* LoginBuilder.swift */,
 				1D6D879E279C05360058E9FF /* LoginContracts.swift */,
@@ -359,6 +362,7 @@
 				1D6D87B6279C06640058E9FF /* ProfileBuilder.swift in Sources */,
 				1D6D8777279C041C0058E9FF /* AppDelegate.swift in Sources */,
 				1D6D87B8279C066C0058E9FF /* ProfileContracts.swift in Sources */,
+				1D16EE65279EEA560085A00C /* LoginNavigationController.swift in Sources */,
 				1D6D87AA279C061A0058E9FF /* ProfileViewController.swift in Sources */,
 				1D6D8790279C04950058E9FF /* AppContainer.swift in Sources */,
 				1D6D879D279C052B0058E9FF /* LoginBuilder.swift in Sources */,

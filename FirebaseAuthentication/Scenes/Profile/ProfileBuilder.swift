@@ -12,6 +12,7 @@ final class ProfileBuilder {
     static func make() -> ProfileViewController {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        viewController.viewModel = ProfileViewModel()
         
         return viewController
     }

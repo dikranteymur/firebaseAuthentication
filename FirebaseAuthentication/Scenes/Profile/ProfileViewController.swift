@@ -9,21 +9,51 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    var viewModel: ProfileViewModelProtocol! {
+        didSet {
+            viewModel.delegate = self
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    */
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.load()
+    }
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        viewModel.logout()
+    }
+    
+}
 
+extension ProfileViewController: ProfileViewModelDelegate {
+    func handleOutput(_ output: ProfileViewModelOutput) {
+        switch output {
+            case .setTitle(let string):
+                title = string
+            case .setLabels(let email, let username):
+                emailLabel.text = email
+                usernameLabel.text = username
+        }
+    }
+    
+    func navigate(to route: ProfileViewRoute) {
+        switch route {
+            case .login:
+                self.tabBarController?.selectedIndex = 0
+                emailLabel.text = ""
+                usernameLabel.text = ""
+                
+                
+        }
+    }
+    
+    
 }

@@ -16,6 +16,12 @@ class LoginViewController: UIViewController {
     
     let auth = Auth.auth()
     
+    var viewModel: LoginViewModelProtocol! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,40 +49,53 @@ class LoginViewController: UIViewController {
             
             // Sign Up: add gesture
             signUpLabel.isUserInteractionEnabled = true
-            let gesture = UITapGestureRecognizer(target: self, action: #selector(tapSighUpLabel))
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(tapSignUpLabel))
             signUpLabel.addGestureRecognizer(gesture)
             
         }
     }
     
-    @objc func tapSighUpLabel() {
-        print("Uye ol")
-//        let viewController = SignUpViewController(nibName: "SignUpView", bundle: nil)
+    @objc func tapSignUpLabel() {
         let vc = SignUpBuilder.make()
-        present(vc, animated: true, completion: nil)
+        show(vc, sender: self)
     }
     
     @IBAction func signInButton(_ sender: Any) {
         if let email = emailTextField.text,
            let password = passwordTextField.text {
-            checkUser(email: email, password: password)
-        }
-    }
-    
-    private func checkUser(email: String, password: String) {
-        auth.signIn(withEmail: email, password: password) { result, error  in
-            if let error = error {
-                self.alert(status: .error)
-                print("error: \(error)")
-            } else {
-                self.alert(status: .success)
-                print("result: \(String(describing: result))")
-            }
+            viewModel.signIn(email: email, password: password)
         }
     }
     
     
 }
+
+extension LoginViewController: LoginViewModelDelegate {
+    func handleOutput(_ output: LoginViewModelOutput) {
+        switch output {
+            case .updateTitle(let string):
+                title = string
+            case .isLoading(let bool):
+                print("isLoading: \(bool)")
+            case .loginResult(let alertStatus):
+                alert(status: alertStatus)
+        }
+    }
+    
+    func navigate(to route: LoginViewRoute) {
+        switch route {
+            case .showAlert(let alertStatus):
+                alert(status: alertStatus)
+            case .signIn:
+                print("giris yapildi")
+            case .signUp:
+                print("cikis yapildi")
+        }
+    }
+    
+    
+}
+
 
 extension LoginViewController {
     private func alert(status: AlertStatus) {
